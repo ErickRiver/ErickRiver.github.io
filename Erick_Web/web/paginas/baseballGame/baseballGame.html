@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de baseball</title>
+
+    <link type="text/css" rel="stylesheet" href="../../recursos/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../recursos/font_awesome/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="../../recursos/sweetalert2/sweetalert2.min.css">
+    <link type="text/css" rel="stylesheet" href="../baseballGame/baseballGame.css">
+</head>
+
+<body>
+    <h1>¡Bienvenido!</h1>
+
+    <label id="lblEquipo1"></label>
+    <label id="lblEquipo2"></label>
+
+    <div class="form-floating d-flex">
+        <input type="text" id="txtEquipo1" class="form-control">
+        <label for="txtEquipo1">Ingrese el nombre del equipo 1:</label>
+    </div>
+
+     <div class="form-floating d-flex">
+        <input type="text" id="txtEquipo2" class="form-control">
+        <label for="txtEquipo2">Ingrese el nombre del equipo 1:</label>
+    </div>
+
+    <input type="text" id="txtEquipo2" placeholder="Ingrese el nombre del equipo 2">
+    <button class="btn" onclick="nombrarEquipos()">Nombrar</button>
+
+    <script src="baseball.js"></script>
+</body>
+
+</html>
