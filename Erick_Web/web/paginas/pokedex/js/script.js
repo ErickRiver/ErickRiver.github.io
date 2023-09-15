@@ -102,5 +102,5 @@ botonesGeneracion.forEach(boton => boton.addEventListener("click", (event) => {
 
 function mostrarPokemonSeleccionado(idPokemon) {
     localStorage.setItem("idPokemon", idPokemon);
-    const newWindow = window.open(`pokemon.html?id=${idPokemon}`, "_blank");
+    const newWindow = window.open(`pokemon.html`, "_blank");
 }
