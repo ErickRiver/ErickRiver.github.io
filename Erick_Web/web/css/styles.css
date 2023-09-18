@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1D202B;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+    --clr-yellow: #FFD600;
+}
+
+/** IMAGENES **/
+
+#pokedex {
+    background-image: url('../img/img_pokedex.png');
+}
+
+#adivinarNumero {
+    background-image: url('../img/img_adivinarNumero.png');
+}
+
+#calculadora {
+    background-image: url('../img/img_calculadora.png');
+}
+
+#conversorMonetario {
+    background-image: url('../img/img_conversorMonetario.png');
+}
+
+#validarCR {
+    background-image: url('../img/img_validarRC.png');
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.contenedor-proyectos img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo {
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.card .textos {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.contenedor-proyectos .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 225);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.contenedor-proyectos .card:hover::before {
+    opacity: 1;
+}
+.contenedor-proyectos .card .textos h1 {
+    display: none;
+    z-index: 2;
+    transition: opacity .5s;
+}
+
+.contenedor-proyectos .card:hover .textos h1 {
+    display: block;
+    opacity: 1;
+}
+
+.banner {
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner ul {
+    list-style: none;
+}
+
+.banner ul li {
+    margin: 15px;
+    font-weight: bold;
+}
+
+.banner .boton {
+    background: var(--clr-yellow);
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .contenedor-proyectos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contenedor-proyectos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

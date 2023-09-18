@@ -1,70 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Adivina el número</title>
 
-    <link type="text/css" rel="stylesheet" href="..\..\recursos\bootstrap\css\bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="../../recursos/font_awesome/css/all.min.css">
-    <link type="text/css" rel="stylesheet" href="../../recursos/sweetalert2/sweetalert2.min.css">
-    <link type="text/css" rel="stylesheet" href="..\..\recursos\sweetalert2\sweetalert2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link type="text/css" rel="stylesheet" href="../adivinarNumero/style.css">
+    <link type="text/css" rel="stylesheet" href="..\..\recursos\bootstrap\css\bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../adivinarNumero/styles.css">
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="contenedor">
 
-        <br>
-        <h1 class="d-flex justify-content-center">Adivina el número</h1>
+        <h1 id="titulo">ADIVINA EL NÚMERO</h1>
 
-        <img href="../../recursos/img/">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <label id="lblMensaje" for="numero"></label>
-            </div>
+        <div class="contenedor-corazones">
+            <!-- <img src="../../img/icon_corazon.png" alt="corazon" class="icon-corazon"> -->
+        </div>
+        <label id="lblPista"></label>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="txtNumero" placeholder="numero">
+            <label id="lblNumero" for="txtNumero"></label>
         </div>
 
-        <div class="d-flex justify-content-center form-floating mb-3">
-            <input type="number" class="form-control" id="numero" placeholder="numero">
-            <label id="lblNumero" for="numero">Número: </label>
+        <div class="botones">
+            <button class="btn btn1"><span>1-10</span></button>
+            <button class="btn btn2"><span>1-50</span></button>
+            <button class="btn btn3"><span>1-100</span></button>
         </div>
 
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <button type="button" class="btn btn-dark" onclick="adivinarNumero()">Adivinar</button>
-            </div>
+        <div class="contenedor-adivinar">
+            <button class="btn adivinar"><span>Adivinar</span>
+                <svg>
+                    <rect x="0" y="0" fill="none"></rect>
+                </svg>
+            </button>
         </div>
 
-        <label id="pista"></label>
     </div>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <div class="menu">
-        <input type="checkbox" id="toggle" />
-        <label id="show-menu" for="toggle">
-            <div class="btn">
-                <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
-                <i class="material-icons md-36 toggleBtn closeBtn">close</i>
-            </div>
-            <div class="btn">
-                1
-            </div>
-            <div class="btn">
-                100
-            </div>
-            <div class="btn">
-                1000
-            </div>
-        </label>
-    </div>
-
-    <script src="Erick_Web\web\recursos\sweetalert2\sweetalert2.js"></script>
-    <script src="../../recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../recursos/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="adivinarNumero.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
