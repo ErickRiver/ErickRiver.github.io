@@ -105,7 +105,7 @@ header {
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0 0 1rem rgba(255, 255, 255, 255, 0.25);
-    
+
     transition: .2s;
 }
 
@@ -125,7 +125,6 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-
 }
 
 @media screen and (min-width: 501px) {
@@ -151,10 +150,10 @@ main {
     overflow: hidden;
     cursor: pointer;
     transition-duration: .5s;
-} 
+}
 
 .pokemon:hover {
-    background-color: var(--type-electric); 
+    background-color: var(--type-electric);
 }
 
 .pokemon-id-back {
@@ -327,9 +326,18 @@ main {
     color: var(--clr-black);
 }
 
+.contenedor-pokemon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
 #radar {
-    width: 500px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #descripcion {
@@ -345,8 +353,21 @@ main {
 }
 
 #imgPokemon {
+    width: 100%;
+    max-width: 400px;
     display: flex;
     margin: 0 auto;
+}
+
+.pokemon-id-back2 {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 21rem;
+    font-weight: 800;
+    color: var(--clr-white);
+    z-index: -1;
 }
 
 #mostrarPokemon {
@@ -359,7 +380,7 @@ main {
     display: inline-block;
     text-align: center;
     align-items: center;
-    margin: 1rem 8rem;
+    margin: 1em 3em;
     cursor: pointer;
 }
 
@@ -373,13 +394,35 @@ main {
     transform: translateX(-50%);
 }
 
-.pokemon-id-back2 {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 21rem;
-    font-weight: 800;
-    color: var(--clr-white);
-    z-index: -1;
+@media screen and (max-width: 950px) {
+    .pokemon-id-back2 {
+        top: 4rem;
+        font-size: 18rem;
+    }
+
+    #radar {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pokemon-id-back2 {
+        font-size: 16rem;
+        top: 8rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .pokemon-id-back2 {
+        font-size: 11rem;
+        top: 8rem;
+    }
+
+    .verAnteriorPosterior {
+        margin: 1em 1em;
+    }
+
+    #radar {
+        max-width: 80%;
+    }
 }
