@@ -53,7 +53,6 @@ btnValidarCurp.addEventListener("click", function () {
     var curp = document.getElementById("curp").value;
     resultadoCurp.innerHTML = validarCURP(curp);
     resultadoCurp.style.display = "block";
-    alert(curpEsCorrecto);
     if (curpEsCorrecto) {
         resultadoCurp.style.backgroundColor = "transparent";
     } else {
