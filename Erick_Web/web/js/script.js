@@ -5,11 +5,11 @@ const calculadora = document.getElementById("calculadora");
 const validarCR = document.getElementById("validarCR");
 
 adivinarNumero.addEventListener("click", function(){
-    window.open(`./paginas/adivinarNumero/adivinarNumero.html`, "blank_");
+    window.open(`./paginas/adivinarNumero/`, "blank_");
 });
 
 conversorMonetario.addEventListener("click", function(){
-    window.open(`./paginas/conversorMonetario/conversorMonetario.html`, "blank_");
+    window.open(`./paginas/conversorMonetario/`, "blank_");
 });
 
 pokedex.addEventListener("click", function(){
@@ -17,9 +17,9 @@ pokedex.addEventListener("click", function(){
 });
 
 calculadora.addEventListener("click", function(){
-    window.open(`./paginas/calculadora/calculadora.html`, "blank_");
+    window.open(`./paginas/calculadora/`, "blank_");
 });
 
 validarCR.addEventListener("click", function(){
-    window.open(`./paginas/validar/validar.html`, "blank_");
+    window.open(`./paginas/validar/`, "blank_");
 });
