@@ -4,6 +4,8 @@ var btnValidarRfc = document.getElementById("btnValidarRfc");
 var resultadoCurp = document.getElementById("resultadoCurp");
 var resultadoRfc = document.getElementById("resultadoRfc");
 
+var curpEsCorrecto = false;
+var rfcEsCorrecto = false;
 
 resultadoCurp.style.display = "none";
 resultadoRfc.style.display = "none";
@@ -39,16 +41,29 @@ btnValidarRfc.addEventListener("click", function () {
     var rfc = document.getElementById("rfc").value;
     resultadoRfc.innerHTML = validarRFC(rfc);
     resultadoRfc.style.display = "block";
+
+    if (rfcEsCorrecto) {
+        resultadoRfc.style.backgroundColor = "transparent";
+    } else {
+        resultadoRfc.style.backgroundColor = "#ef2947";
+    }
 });
 
 btnValidarCurp.addEventListener("click", function () {
     var curp = document.getElementById("curp").value;
     resultadoCurp.innerHTML = validarCURP(curp);
     resultadoCurp.style.display = "block";
+    alert(curpEsCorrecto);
+    if (curpEsCorrecto) {
+        resultadoCurp.style.backgroundColor = "transparent";
+    } else {
+        resultadoCurp.style.backgroundColor = "#ef2947";
+    }
 });
 
 
 function validarCURP(curp) {
+    curpEsCorrecto = false;
     // 1. VALIDAR LONGITUD
     if (curp.length !== 18) {
         return "La CURP debe tener 18 caracteres.";
@@ -62,7 +77,7 @@ function validarCURP(curp) {
 
     if (sexo == 'H') {
         sexo = "Hombre";
-    } else if(sexo == 'M'){
+    } else if (sexo == 'M') {
         sexo = "Mujer";
     } else {
         sexo = "Otro";
@@ -167,12 +182,13 @@ function validarCURP(curp) {
     // 1000 milisegundos = 1 seg...etc
     const edad = Math.floor((fechaActual - fechaNacimiento) / (1000 * 60 * 60 * 24 * 365.25));
 
+    curpEsCorrecto = true;
     // 7. VERIFICAR QUE COINCIDA
-    if(document.getElementById("rfc").value.substr(0, 10) === curp.substr(0,10)){
+    if (document.getElementById("rfc").value.substr(0, 10) === curp.substr(0, 10)) {
         return "CURP válida <br/>" + "Edad: " + edad +
-        " años <br/>Sexo: " + sexo + "<br/>Estado: " + estados[estado] +
-        "<br/>Fecha de nacimiento: " + dia + "/" + mes + "/" + anio +
-        "<br/>CURP y RFC coinciden";
+            " años <br/>Sexo: " + sexo + "<br/>Estado: " + estados[estado] +
+            "<br/>Fecha de nacimiento: " + dia + "/" + mes + "/" + anio +
+            "<br/>CURP y RFC coinciden";
     }
 
     // Si todas las validaciones pasan, la CURP es válida
@@ -182,6 +198,8 @@ function validarCURP(curp) {
 }
 
 function validarRFC(rfc) {
+    rfcEsCorrecto = false;
+
     // 1. VALIDAR LONGITUD
     if (rfc.length !== 13) {
         return "El RFC debe tener 13 caracteres.";
@@ -236,11 +254,12 @@ function validarRFC(rfc) {
     // 1000 milisegundos = 1 seg...etc
     const edad = Math.floor((fechaActual - fechaNacimiento) / (1000 * 60 * 60 * 24 * 365.25));
 
+    rfcEsCorrecto = true;
     // 7. VERIFICAR QUE COINCIDA
-    if(rfc.substr(0, 10) === document.getElementById("curp").value.substr(0,10)){
+    if (rfc.substr(0, 10) === document.getElementById("curp").value.substr(0, 10)) {
         return "RFC válido <br/>" + "Edad: " + edad +
-        " años <br/>Fecha de nacimiento: " + dia + "/" + mes + "/" + anio +
-        " <br/>CURP y RFC coinciden";
+            " años <br/>Fecha de nacimiento: " + dia + "/" + mes + "/" + anio +
+            " <br/>CURP y RFC coinciden";
     }
 
     // Si todas las validaciones pasan, la CURP es válida

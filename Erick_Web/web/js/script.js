@@ -21,5 +21,5 @@ calculadora.addEventListener("click", function(){
 });
 
 validarCR.addEventListener("click", function(){
-    window.open(`./paginas/validar/`, "blank_");
+    window.open(`./paginas/validarRC/`, "blank_");
 });
