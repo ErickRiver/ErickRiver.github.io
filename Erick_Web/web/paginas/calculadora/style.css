@@ -129,6 +129,10 @@
         background-color: #191919;
     }
 
+    body.white {
+        background-color: #FFCA28;
+    }
+
     #titulo {
         display: none;
     }

@@ -144,6 +144,7 @@ function borrarNumero() {
 
 /***** CAMBIA EL TEMA DE LA CALCULADORA *****/
 var tema = document.getElementById("tema");
+var body = document.querySelector("body");
 var calculadora = document.getElementById("calculadora");
 var estadoWhite = false; // Variable de estado
 var botoness = document.getElementsByClassName('boton');
@@ -153,10 +154,12 @@ tema.addEventListener("click", function () {
   if (estadoWhite) {
     calculadora.classList.remove('white');
     pantalla.classList.remove('white');
+    document.body.classList.remove("white");
     for (var i = 0; i < botoness.length; i++) {
       botoness[i].classList.remove('white');
     }
   } else {
+    document.body.classList.add("white");
     calculadora.classList.add('white');
     pantalla.classList.add('white');
     for (var i = 0; i < botoness.length; i++) {
