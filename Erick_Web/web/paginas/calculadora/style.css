@@ -116,7 +116,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: aparecerDesdeArriba 2s ease-in-out;
-    /* Aplicar la animación */
 }
 
 #icon-borrar {

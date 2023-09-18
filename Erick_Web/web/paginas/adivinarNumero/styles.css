@@ -42,7 +42,7 @@
 }
 
 .botones {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 40px;
@@ -131,15 +131,15 @@
   top: 0;
 }
 
-.contenedor-adivinar {
-  width: 500px;
-
-  display: inline-flex;
+.botones.adivinar {
+  display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  max-width: 520px;
+  margin: 0;
 }
 
-.btn.adivinar span {
+.botones.adivinar .btn.adivinar span {
   color: #000;
 }
 
@@ -221,5 +221,11 @@
 
   .icon-corazon {
     width: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #lblNumero {
+    font-size: 15px;
   }
 }
