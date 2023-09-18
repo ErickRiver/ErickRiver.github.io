@@ -95,7 +95,7 @@ function llenarDatosEstats(data) {
     var statsValues = Object.values(pokemonStats);
 
     var datos = {
-        labels: ['HP', 'Ataque', 'Defensa', 'Ataque Especial', 'Defensa Especial', 'Velocidad'],
+        labels: ['HP', 'Ataque', 'Defensa', 'Atq. Especial', 'Def. Especial', 'Velocidad'],
         datasets: [{
             label: 'Estadísticas',
             data: statsValues,
