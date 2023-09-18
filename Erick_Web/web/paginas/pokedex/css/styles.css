@@ -426,3 +426,18 @@ main {
         max-width: 80%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .pokemon-id-back2 {
+        font-size: 8rem;
+        top: 8rem;
+    }
+
+    .verAnteriorPosterior {
+        margin: 1em 1em;
+    }
+
+    #radar {
+        max-width: 80%;
+    }
+}
