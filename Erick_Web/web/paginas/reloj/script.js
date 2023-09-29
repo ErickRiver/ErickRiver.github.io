@@ -191,7 +191,7 @@ class Temporizador {
                 // Si ya se inició previamente y se detuvo, ajustar startTime
                 this.startTime += Date.now() - this.lastProgressStartTime;
             }
-            
+
             this.progress = setInterval(() => {
                 this.currentTime = Date.now();
                 this.elapsedTime = this.currentTime - this.startTime;
@@ -276,9 +276,9 @@ const cronometroContainer = document.querySelector(".contenedor.cronometro");
 const temporizadorContainer = document.querySelector(".contenedor.temporizador");
 
 // Ocultar todos los contenedores al cargar la página
-relojContainer.style.display = "none";
+relojContainer.style.display = "grid";
 cronometroContainer.style.display = "none";
-temporizadorContainer.style.display = "grid";
+temporizadorContainer.style.display = "none";
 
 // Función para mostrar el contenedor seleccionado y ocultar los demás
 function mostrarContenedor(contenedor) {
@@ -293,29 +293,3 @@ function mostrarContenedor(contenedor) {
 relojLink.addEventListener("click", () => mostrarContenedor(relojContainer));
 cronometroLink.addEventListener("click", () => mostrarContenedor(cronometroContainer));
 temporizadorLink.addEventListener("click", () => mostrarContenedor(temporizadorContainer));
-
-// let circularProgress = document.querySelector(".circular-progress"),
-//     progressValue = document.querySelector(".progress-value");
-
-// function barraProgreso(duration) {
-//     let startTime = Date.now();
-
-//     function updateProgress() {
-//         const currentTime = Date.now();
-//         const elapsedTime = currentTime - startTime;
-
-//         if (elapsedTime >= duration) {
-//             clearInterval(progress);
-//             circularProgress.style.background = `conic-gradient(#7d2ae8 360deg, var(--clr-gray) 0deg)`;
-//             progressValue.textContent = '100%';
-//         } else {
-//             const progressPercentage = (elapsedTime / duration) * 100;
-//             circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressPercentage}deg, var(--clr-gray) 0deg)`;
-//             progressValue.textContent = `${Math.floor(progressPercentage)}%`;
-//         }
-//     }
-
-//     updateProgress(); // Llamar inicialmente para configurar el estado inicial
-
-//     const progress = setInterval(updateProgress, 10); // Actualiza cada segundo (1000 ms)
-// }
