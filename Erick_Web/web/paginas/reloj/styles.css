@@ -802,12 +802,4 @@ h1 {
         width: 80px;
         height: 80px;
     }
-
-    .btn {
-        max-width: 43px;
-        height: 45px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
