@@ -6,27 +6,27 @@ const validarCR = document.getElementById("validarCR");
 const reloj = document.getElementById("reloj");
 
 adivinarNumero.addEventListener("click", function () {
-    window.open(`./paginas/adivinarNumero/`, "blank_");
+    window.open(`https://erickriver.github.io/adivinarNumero/`, "blank_");
 });
 
 conversorMonetario.addEventListener("click", function () {
-    window.open(`./paginas/conversorMonetario/`, "blank_");
+    window.open(`https://erickriver.github.io/conversorMonetario/`, "blank_");
 });
 
 pokedex.addEventListener("click", function () {
-    window.open(`./paginas/pokedex/`, "blank_");
+    window.open(`https://erickriver.github.io/pokedex/`, "blank_");
 });
 
 calculadora.addEventListener("click", function () {
-    window.open(`./paginas/calculadora/`, "blank_");
+    window.open(`https://erickriver.github.io/calculadora/`, "blank_");
 });
 
 validarCR.addEventListener("click", function () {
-    window.open(`./paginas/validarCR/`, "blank_");
+    window.open(`https://erickriver.github.io/validarCurpRfc/`, "blank_");
 });
 
 reloj.addEventListener("click", function () {
-    window.open(`./paginas/reloj/`, "blank_");
+    window.open(`https://erickriver.github.io/reloj/`, "blank_");
 });
 
 
