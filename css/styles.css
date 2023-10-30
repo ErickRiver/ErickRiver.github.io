@@ -78,7 +78,7 @@ li.nav-item a:hover {
 }
 
 #imagenPerfil {
-    background-image: url('../img/img_pokedex.png');
+    background-image: url('../img/foto.jpg');
     height: 50vh;
 }
 
@@ -125,7 +125,7 @@ li.nav-item a:hover {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 40px;
+    padding: 10px;
 
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -275,7 +275,6 @@ li.nav-item a:hover {
     text-align: justify;
     padding: 30px;
     gap: 20px;
-    height: 50vh;
 }
 
 .btn {
@@ -412,7 +411,7 @@ li.nav-item a:hover {
 }
 
 .contenedor-contacto {
-    width: 60%;
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     text-align: center;
@@ -422,10 +421,6 @@ li.nav-item a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contenedor-contacto h1 {
-    margin: 20px;
 }
 
 .contenedor-contacto .contacto {
@@ -515,7 +510,6 @@ li.nav-item a:hover {
     .contenedor {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
     }
 
     .contenedor-proyectos {
@@ -551,7 +545,6 @@ li.nav-item a:hover {
     .contenedor {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .contenedor-principal .info-personal h1 {
@@ -580,4 +573,21 @@ li.nav-item a:hover {
         font-size: 48px;
     }
 
+}
+
+@media screen and (max-width: 300px) {
+    .contenedor-proyectos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-proyectos .card{
+        width: 80%;
+    }
+
+    .banner .botones .btn{
+        width: 100%
+    }
 }
