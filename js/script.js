@@ -10,7 +10,7 @@ adivinarNumero.addEventListener("click", function () {
 });
 
 conversorMonetario.addEventListener("click", function () {
-    window.open(`https://erickriver.github.io/conversorMonetario/conversor_web/web/`, "blank_");
+    window.open(`https://erickriver.github.io/conversorMonetario/web/`, "blank_");
 });
 
 pokedex.addEventListener("click", function () {
