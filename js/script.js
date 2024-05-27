@@ -1,5 +1,5 @@
 const adivinarNumero = document.getElementById("adivinarNumero");
-const conversorMonetario = document.getElementById("conversorMonetario");
+const juegoGato = document.getElementById("juegoGato");
 const pokedex = document.getElementById("pokedex");
 const calculadora = document.getElementById("calculadora");
 const validarCR = document.getElementById("validarCR");
@@ -9,8 +9,8 @@ adivinarNumero.addEventListener("click", function () {
     window.open(`https://erickriver.github.io/adivinarNumero/`, "blank_");
 });
 
-conversorMonetario.addEventListener("click", function () {
-    window.open(`https://erickriver.github.io/conversorMonetario/web/`, "blank_");
+juegoGato.addEventListener("click", function () {
+    window.open(`https://erickriver.github.io/juegoGato/`, "blank_");
 });
 
 pokedex.addEventListener("click", function () {

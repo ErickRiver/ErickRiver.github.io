@@ -99,8 +99,8 @@ li.nav-item a:hover {
     background-image: url('../img/img_calculadora.png');
 }
 
-#conversorMonetario {
-    background-image: url('../img/img_conversorMonetario.png');
+#juegoGato {
+    background-image: url('../img/img_juegoGato.png');
 }
 
 #validarCR {
@@ -115,6 +115,7 @@ li.nav-item a:hover {
 .contenedor-tecnologias,
 .contenedor,
 .contenedor-educacion,
+.contenedor-experiencia,
 .contenedor-contacto {
     min-height: 100vh;
     height: auto;
@@ -128,7 +129,7 @@ li.nav-item a:hover {
     padding: 10px;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr;
     gap: 20px;
 }
 
@@ -145,7 +146,7 @@ li.nav-item a:hover {
 
 .contenedor-proyectos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -199,40 +200,7 @@ li.nav-item a:hover {
     opacity: 1;
 }
 
-.banner {
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-    background-size: cover;
-    background-position: center center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.banner ul {
-    list-style: none;
-}
-
-.banner ul li {
-    margin: 15px;
-    font-weight: bold;
-}
-
-.banner .boton {
-    background: var(--clr-yellow);
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    padding: 10px;
-    border: none;
-    border-radius: 100px;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-}
 
 .contenedor-principal {
     padding: 20px;
@@ -251,21 +219,6 @@ li.nav-item a:hover {
 .contenedor-principal p {
     font-size: 18px;
 }
-/* 
-.contenedor-principal::after {
-    content: "";
-    width: 80%;
-    position: absolute;
-    top: 0;
-
-    border-top: 900px solid rgb(30, 30, 30);
-    border-left: 2500px solid transparent;
-    transition: .3s ease-in-out all;
-}
-
-.contenedor-principal:hover::after {
-    width: 100%;
-} */
 
 .contenedor-principal .info-personal {
     display: flex;
@@ -373,7 +326,7 @@ li.nav-item a:hover {
     height: 120px;
 }
 
-.contenedor-educacion {
+.contenedor-educacion, .contenedor-experiencia {
     padding: 60px 20px;
     width: 100%;
     max-width: 1200px;
@@ -387,7 +340,11 @@ li.nav-item a:hover {
     align-items: center;
 }
 
-.contenedor-educacion .titulos {
+.contenedor-experiencia {
+    grid-template-columns: 1fr;
+}
+
+.contenedor-educacion .titulos, .contenedor-experiencia .titulos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,7 +363,7 @@ li.nav-item a:hover {
     margin-top: -30px;
 }
 
-.contenedor-educacion .titulos img {
+.contenedor-educacion .titulos img, .contenedor-experiencia .titulos img {
     width: 35%;
 }
 
