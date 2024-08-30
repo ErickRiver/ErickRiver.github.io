@@ -150,7 +150,7 @@ li.nav-item a:hover {
     gap: 20px;
 }
 
-.contenedor-proyectos .card{
+.contenedor-proyectos .card {
     cursor: pointer;
 }
 
@@ -318,6 +318,10 @@ li.nav-item a:hover {
     gap: 20px;
 }
 
+.conocimientos.lenguajes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
 
 .conocimientos img {
     width: 120px;
@@ -326,7 +330,8 @@ li.nav-item a:hover {
     height: 120px;
 }
 
-.contenedor-educacion, .contenedor-experiencia {
+.contenedor-educacion,
+.contenedor-experiencia {
     padding: 60px 20px;
     width: 100%;
     max-width: 1200px;
@@ -340,11 +345,20 @@ li.nav-item a:hover {
     align-items: center;
 }
 
+.contenedor-educacion h3 { 
+    text-align: center;    
+}
+
+.contenedor-educacion :nth-child(4) {
+    grid-column: 2;
+}
+
 .contenedor-experiencia {
     grid-template-columns: 1fr;
 }
 
-.contenedor-educacion .titulos, .contenedor-experiencia .titulos {
+.contenedor-educacion .titulos,
+.contenedor-experiencia .titulos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,7 +368,8 @@ li.nav-item a:hover {
     gap: 10px;
     box-shadow: 15px 25px 15px 0 rgba(0, 0, 0, .30);
 
-    height: 55vh;
+    min-height: 70vh;
+    height: auto;
     background-color: #e9e9e9;
     transition: .5s ease-in-out all;
 }
@@ -363,7 +378,8 @@ li.nav-item a:hover {
     margin-top: -30px;
 }
 
-.contenedor-educacion .titulos img, .contenedor-experiencia .titulos img {
+.contenedor-educacion .titulos img,
+.contenedor-experiencia .titulos img {
     width: 35%;
 }
 
@@ -540,11 +556,11 @@ li.nav-item a:hover {
         align-items: center;
     }
 
-    .contenedor-proyectos .card{
+    .contenedor-proyectos .card {
         width: 80%;
     }
 
-    .banner .botones .btn{
+    .banner .botones .btn {
         width: 100%
     }
 }
